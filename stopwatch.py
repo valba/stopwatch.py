@@ -111,12 +111,12 @@ class StopWatch(tk.Frame):
         widget = StopWatch(root)
         widget.pack(side=tk.TOP)
 
-        widget._button = tk.Button(widget, text='Start', command=widget.Start).pack(side=tk.LEFT, pady=5, padx=5)
-        widget._button = tk.Button(widget, text='Lap', command=widget._lap).pack(side=tk.LEFT)
-        widget._button = tk.Button(widget, text='Stop', command=widget._stop).pack(side=tk.LEFT)
+        widget._quitbutton = tk.Button(widget, text='Quit', command=widget.quit).pack(side=tk.LEFT, pady=5, padx=5)
         widget._button = tk.Button(widget, text='Reset', command=widget._reset).pack(side=tk.LEFT)
-        widget._button = tk.Button(widget, text='Save', command=widget._saveCSV).pack(side=tk.LEFT)
-        widget._quitbutton = tk.Button(widget, text='Quit', command=widget.quit).pack(side=tk.LEFT)
+        widget._button = tk.Button(widget, text='Start', command=widget.Start).pack(side=tk.LEFT, pady=5, padx=5)
+        widget._button = tk.Button(widget, text='Save', command=widget._saveCSV).pack(side=tk.RIGHT, pady=5, padx=5)
+        widget._button = tk.Button(widget, text='Stop', command=widget._stop).pack(side=tk.RIGHT)
+        widget._button = tk.Button(widget, text='Lap', command=widget._lap).pack(side=tk.RIGHT, pady=5, padx=5)
         
         root.mainloop()
 
